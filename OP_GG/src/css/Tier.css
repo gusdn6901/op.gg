@@ -1,0 +1,91 @@
+.tier {
+	vertical-align: top;
+	position: relative;
+	display: inline-block;
+}
+
+.tierContainer {
+	margin: 4px 0px 4px 80px;
+	position: relative;
+	display: flex;
+	width: 650px;
+}
+
+.tierDetail {
+	border: 1px solid #cdd2d2;
+	box-shadow: 0 1px #dcdfdf;
+	background: #f2f2f2;
+	border-radius: 2px;
+	width: 100%;
+	display: table;
+	color: #879292;
+	position: relative;
+	background-color: #f2f2f2;
+	margin: 0 10px;
+}
+
+.medal {
+	display: table-cell;
+	vertical-align: middle;
+	width: 120px;
+	height: 124px;
+	text-align: center;
+}
+
+.medalImage {
+	width: 104px;
+	height: 104px;
+	margin: -5px 0 -10px 0;
+}
+
+.tierInfo {
+	margin-top: 10px;
+	margin-left: 5px;
+	display: block;
+	text-align: left;
+}
+
+.tierInfo span {
+	display: block;
+}
+
+.rank {
+	font-size: 11px;
+	color: #879292;
+	line-height: 30px;
+}
+
+.unranked {
+	font-size: 15px;
+	font-weight: bold;
+	color: #879292;
+}
+
+.tier {
+	font-size: 15px;
+	font-weight: bold;
+	color: #1f8ecd;
+}
+
+.points {
+	font-size: 12px;
+	font-weight: bold;
+	color: #555e5e;
+}
+
+.points div {
+	display: inline;
+	font-size: 12px;
+	color: #879292;
+}
+
+.winRates {
+	font-size: 12px;
+	color: #879292;
+}
+
+.leagueName {
+	margin-top: 5px;
+	font-size: 12px;
+	color: #879292;
+}

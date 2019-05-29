@@ -1,0 +1,41 @@
+.gameWrap {
+	position: relative;
+	border-radius: 3px;
+	margin-bottom: 8px;
+}
+
+.gameItem {
+	position: relative;
+	background: none;
+}
+
+.match {
+	display: table;
+	width: 100%;
+	border-collapse: collapse;
+	border: 1px solid #cdd2d2;
+}
+
+.win {
+	background-color: #a3cfec;
+	border-color: #99b9cf;
+	table-layout: fixed;
+}
+
+.lose {
+	background-color: #e2b6b3;
+	border-color: #cea7a7;
+	table-layout: fixed;
+}
+
+.replay {
+	background-color: #b6b6b6;
+	border-color: #a7a7a7;
+	table-layout: fixed;
+}
+
+.gameItem>.match>.gameIngredient {
+	display: table-cell;
+	height: 100px;
+	vertical-align: middle;
+}

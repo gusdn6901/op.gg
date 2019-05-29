@@ -1,0 +1,58 @@
+.icon {
+	display: inline-block;
+	position: relative;
+	width: 120px;
+	height: 120px;
+	margin-top: 5px;
+	
+	background-image: url(//opgg-static.akamaized.net/images/borders2/gold.png);
+	background-size: 120px;
+}
+
+.icon p {
+	top: 35px;
+	left: 35px;
+	position: absolute;
+	font-family: Helvetica,"Malgun Gothic","Apple SD Gothic Neo",AppleGothic,Dotum,Arial,Tahoma;
+	font-size: 14px;
+	color: #555e5e;
+}
+
+.icon img {
+	position: relative;
+	z-index: 2;
+	display: block;
+	padding: 10px;
+	width: 100px;
+	height: 100px;
+}
+
+.profile {
+	position: relative;
+	display: inline-block;
+	min-width: 130px;
+	height: auto;
+	margin: 20px 0px 20px 30px;
+	vertical-align: top;
+	line-height: 1.4;
+	text-align: left;
+}
+
+.name {
+	color: #242929;
+	font-size: 20px;
+	font-weight: bold;
+	margin-right: 4px;
+	vertical-align: middle;
+}
+
+.level {
+	color: #242929;
+	font-size: 15px;
+	font-weight: bold;
+	margin-right: 4px;
+	vertical-align: middle;
+	line-height: 1.6;
+	font-family: Arial;
+	color: #99a2a2;
+}

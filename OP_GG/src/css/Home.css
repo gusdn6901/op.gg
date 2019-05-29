@@ -1,0 +1,98 @@
+.home {
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+	height: 100%;
+	min-height: 100%;
+	background-color: #16a7fa;
+}
+
+.header {
+	padding-top: 0.8%;
+	padding-bottom: 0.8%;
+	position: relative;
+	max-width: 1300px;
+	margin: 0 auto;
+}
+
+.siteName {
+	padding-right: 20px;
+	height: 100%;
+	display: inline-block;
+	vertical-align: middle;
+	font-weight: 600;
+	position: relative;
+	margin-right: 20px;
+	line-height: 200%;
+}
+
+.siteName a {
+	display: block;
+	text-decoration: none;
+}
+
+.siteName img {
+	max-width: 100%;
+	height: auto;
+	margin-left: 12px;
+	margin-right: 12px;
+	vertical-align: middle;
+}
+
+.siteName span {
+	color: #fff;
+	font-size: 1.7em;
+	vertical-align: middle;
+}
+
+.siteName:after {
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	content: "";
+	border-right: 1px solid #fff;
+	border-right-color: rgba(255, 255, 255, 0.4);
+}
+
+.menu {
+	margin: 0 auto;
+	height: 40px;
+	background: #1d2e51;
+}
+
+.container {
+	width: 79.825%;
+	margin: 0 auto;
+	position: relative;
+	min-height: 700px;
+	padding-bottom: 120px;
+}
+
+.logoIndex {
+	padding: 170px 0 53px;
+}
+
+.logo img {
+	max-width: 360px;
+	max-height: 232px;
+	margin: 0 auto;
+	display: block;
+}
+
+.footer {
+	color: #fff;
+	position: relative;
+	bottom: 0;
+	left: 0;
+	width: 64%;
+	margin: 0 auto;
+	padding: 40px 0;
+}
+
+.copyRight {
+	margin-top: 0.745%;
+	line-height: 100%;
+	font-size: 0.75em;
+	font-weight: bold;
+}

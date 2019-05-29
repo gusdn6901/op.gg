@@ -1,0 +1,249 @@
+type Summoner {
+	name: String!
+	summonerLevel: String!
+	profileIconId: Int
+	puuid: String
+	accountId: String
+	id: String
+	revisionDate: String
+}
+
+type League {
+	tier: String
+	summonerName: String
+	hotStreak: Boolean
+	wins: Int
+	veteran: Boolean
+	losses: Int
+	rank: String
+	leagueName: String
+	inactive: Boolean
+	freshBlood: Boolean
+	position: String
+	leagueId: String
+	queueType: String
+	summonerId: String
+	leaguePoints: Int
+}
+
+type Match {
+	lane: String
+	gameId: String
+	champion: Int
+	platformId: String
+	season: Int
+	queue: Int
+	role: String
+	timestamp: String
+}
+
+type Matches {
+	matches: [Match]
+	totalGames: Int
+	startIndex: Int
+	endIndex: Int
+}
+
+type Games {
+	seasonId: Int
+	queueId: Int
+	gameId: String
+	participantIdentities: [ParticipantIdentity]
+	gameVersion: String
+	platformId: String
+	gameMode: String
+	mapId: Int
+	gameType: String
+	teams: [TeamStatsDto]
+	participants: [ParticipantDto]
+	gameDuration: String
+	gameCreation: String
+}
+
+type ParticipantIdentity {
+	player: PlayerDto
+	participantId: Int
+}
+
+type PlayerDto {
+	currentPlatformId: String
+	summonerName: String
+	matchHistoryUri: String
+	platformId: String
+	currentAccountId: String
+	profileIcon: Int
+	summonerId: String
+	accountId: String
+}
+
+type TeamStatsDto {
+	firstDragon: Boolean
+	firstInhibitor: Boolean
+	bans: [TeamBansDto]
+	baronKills: Int
+	firstRiftHerald: Boolean
+	firstBaron: Boolean
+	riftHeraldKills: Int
+	firstBlood: Boolean
+	teamId: Int
+	firstTower: Boolean
+	vilemawKills: Int
+	inhibitorKills: Int
+	towerKills: Int
+	dominionVictoryScore: Int
+	win: String
+	dragonKills: Int
+}
+
+type TeamBansDto {
+	pickTurn: Int
+	championId: Int
+}
+
+type ParticipantDto {
+	stats: ParticipantStatsDto
+	participantId: Int
+	runes: [RuneDto]
+	timeline: ParticipantTimelineDto
+	teamId: Int
+	spell2Id: Int
+	masteries: [MasteryDto]
+	highestAchievedSeasonTier: String
+	spell1Id: Int
+	championId: Int
+}
+
+type ParticipantStatsDto {
+	perk0: Int
+	perk1: Int
+	perk2: Int
+	perk3: Int
+	perk4: Int
+	perk5: Int
+	perk0Var1: Int
+	perk0Var2: Int
+	perk0Var3: Int
+	perk1Var1: Int
+	perk1Var2: Int
+	perk1Var3: Int
+	perk2Var1: Int
+	perk2Var2: Int
+	perk2Var3: Int
+	perk3Var1: Int
+	perk3Var2: Int
+	perk3Var3: Int
+	perk4Var1: Int
+	perk4Var2: Int
+	perk4Var3: Int
+	perk5Var1: Int
+	perk5Var3: Int
+	perk5Var2: Int
+	doubleKills: Int
+	tripleKills: Int
+	quadraKills: Int
+	pentaKills: Int
+	item0: Int
+	item1: Int
+	item2: Int
+	item3: Int
+	item4: Int
+	item5: Int
+	item6: Int
+	playerScore0: Int
+	playerScore1: Int
+	playerScore2: Int
+	playerScore3: Int
+	playerScore4: Int
+	playerScore5: Int
+	playerScore6: Int
+	playerScore7: Int
+	playerScore8: Int
+	playerScore9: Int
+	kills: Int
+	deaths: Int
+	assists: Int
+	goldEarned: Int
+	goldSpent: Int
+	firstBloodKill: Boolean
+	firstBloodAssist: Boolean
+	firstTowerKill: Boolean
+	firstTowerAssist: Boolean
+	firstInhibitorKill: Boolean
+	firstInhibitorAssist: Boolean
+	totalDamageDealtToChampions: String
+	totalDamageDealt: String
+	totalDamageTaken: String
+	totalScoreRank: Int
+	totalPlayerScore: Int
+	totalHeal: String
+	totalUnitsHealed: Int
+	totalMinionsKilled: Int
+	totalTimeCrowdControlDealt: Int
+	longestTimeSpentLiving: Int
+	physicalDamageDealt: String
+	physicalDamageDealtToChampions: String
+	physicalDamageTaken: String
+	magicDamageDealt: String
+	magicDamageDealtToChampions: String
+	magicalDamageTaken: String
+	visionScore: String
+	visionWardsBoughtInGame: Int
+	wardsPlaced: Int
+	wardsKilled: Int
+	damageDealtToObjectives: String
+	damageDealtToTurrets: String
+	neutralMinionsKilled: Int
+	neutralMinionsKilledEnemyJungle: Int
+	neutralMinionsKilledTeamJungle: Int
+	nodeNeutralize: Int
+	nodeNeutralizeAssist: Int
+	nodeCapture: Int
+	largestMultiKill: Int
+	largestKillingSpree: Int
+	largestCriticalStrike: Int
+	trueDamageDealt: String
+	trueDamageDealtToChampions: String
+	trueDamageTaken: String
+	teamObjective: Int
+	damageSelfMitigated: String
+	combatPlayerScore: Int
+	perkPrimaryStyle: Int
+	participantId: Int
+	sightWardBoughtInGame: Int
+	turretKills: Int
+	inhibitorKills: Int
+	killingSprees: Int
+	unrealKills: Int
+	win: Boolean
+	objectivePlayerScore: Int
+	perkSubStyle: Int
+	altarsCaptured: Int
+	altarsNeutralized: Int
+	champLevel: Int
+	nodeCaptureAssist: Int
+	timeCCingOthers: String
+}
+
+type RuneDto {
+	runeId: Int
+	rank: Int
+}
+
+
+type ParticipantTimelineDto {
+	lane: String
+	participantId: Int
+	role: String
+}
+
+type MasteryDto {
+	masteryId: Int
+	rank: Int
+}
+
+type Query {
+	summoner(name: String!): Summoner!
+	league(name: String!): [League]!
+	matches(name: String!): Matches!
+	games(name: String!): [Games]!
+}

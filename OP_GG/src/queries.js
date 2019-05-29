@@ -1,0 +1,215 @@
+import gql from "graphql-tag";
+
+export const summoner = (name) =>gql`
+	query {
+	 summoner(name:"${name}") {
+    name
+    summonerLevel
+		profileIconId
+		puuid
+		accountId
+		id
+		revisionDate
+	}
+
+	league(name:"${name}") {
+		tier
+		summonerName
+		hotStreak
+		wins
+		veteran
+		losses
+		rank
+		leagueName
+		inactive
+		freshBlood
+		position
+		leagueId
+		queueType
+		summonerId
+		leaguePoints
+	}
+	matches(name: "${name}") {
+		matches{
+			lane
+			gameId
+			champion
+			platformId
+			season
+			queue
+			role
+			timestamp
+		}
+		totalGames
+		startIndex
+		endIndex
+	}
+
+	games(name: "${name}") {
+    seasonId
+    queueId
+    gameId
+    participantIdentities {
+      player {
+        currentPlatformId
+        summonerName
+        matchHistoryUri
+        platformId
+        currentAccountId
+        profileIcon
+        summonerId
+        accountId
+      }
+      participantId
+    }
+    gameVersion
+    platformId
+    gameMode
+    mapId
+    gameType
+    teams {
+      firstDragon
+      firstInhibitor
+      bans {
+        pickTurn
+        championId
+      }
+      baronKills
+      firstRiftHerald
+      firstBaron
+      riftHeraldKills
+      firstBlood
+      teamId
+      firstTower
+      vilemawKills
+      inhibitorKills
+      towerKills
+      dominionVictoryScore
+      win
+      dragonKills
+    }
+    participants {
+      stats {
+        perk0
+        perk1
+        perk2
+        perk3
+        perk4
+        perk5
+        perk0Var1
+        perk0Var2
+        perk0Var3
+        perk1Var1
+        perk1Var2
+        perk1Var3
+        perk2Var1
+        perk2Var2
+        perk2Var3
+        perk3Var1
+        perk3Var2
+        perk3Var3
+        perk4Var1
+        perk4Var2
+        perk4Var3
+        perk5Var1
+        perk5Var2
+        perk5Var3
+        doubleKills
+        tripleKills
+        quadraKills
+        pentaKills
+        item0
+        item1
+        item2
+        item3
+        item4
+        item5
+				item6
+        playerScore0
+        playerScore1
+        playerScore2
+        playerScore3
+        playerScore4
+        playerScore5
+        playerScore6
+        playerScore7
+        playerScore8
+        playerScore9
+        kills
+        deaths
+        assists
+        goldEarned
+        goldSpent
+        firstBloodKill
+        firstBloodAssist
+        firstTowerKill
+        firstTowerAssist
+        firstInhibitorKill
+        firstInhibitorAssist
+        totalDamageDealtToChampions
+        totalDamageDealt
+        totalDamageTaken
+        totalScoreRank
+        totalPlayerScore
+        totalHeal
+        totalUnitsHealed
+        totalMinionsKilled
+        totalTimeCrowdControlDealt
+        longestTimeSpentLiving
+        physicalDamageDealt
+        physicalDamageDealtToChampions
+        physicalDamageTaken
+        magicDamageDealt
+        magicDamageDealtToChampions
+        magicalDamageTaken
+        visionScore
+        visionWardsBoughtInGame
+        wardsPlaced
+        wardsKilled
+        damageDealtToObjectives
+        damageDealtToTurrets
+        neutralMinionsKilled
+        neutralMinionsKilledTeamJungle
+        neutralMinionsKilledEnemyJungle
+        largestMultiKill
+        largestKillingSpree
+        largestCriticalStrike
+        trueDamageDealt
+        trueDamageDealtToChampions
+        trueDamageTaken
+        teamObjective
+        damageSelfMitigated
+        combatPlayerScore
+				perkPrimaryStyle
+        perkSubStyle
+        altarsCaptured
+        altarsNeutralized
+        champLevel
+        nodeCaptureAssist
+        timeCCingOthers
+      }
+      participantId
+      teamId
+      spell2Id
+      masteries {
+        masteryId
+        rank
+      }
+      highestAchievedSeasonTier
+      spell1Id
+      championId
+      runes {
+        runeId
+        rank
+      }
+      timeline {
+        lane
+        participantId
+        role
+      }
+    }
+		gameDuration
+    gameCreation
+  }
+}
+`;
