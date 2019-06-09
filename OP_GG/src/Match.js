@@ -158,6 +158,9 @@ class Match extends Component {
 					<div className="KDARatio">
 						<span className="ratio">
 							{
+								this.props.user.userGame.stats.deaths === 0 ?
+								(this.props.user.userGame.stats.kills + this.props.user.userGame.stats.assists).toFixed(2)
+									:
 								((this.props.user.userGame.stats.kills + this.props.user.userGame.stats.assists)/this.props.user.userGame.stats.deaths).toFixed(2)
 							}:1
 						</span>

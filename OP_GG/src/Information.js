@@ -1,10 +1,19 @@
 import React, { Component } from "react";
+import Search from "./SearchForm";
 import SummonerInfo from "./SummonerInfo";
 import Matches from "./Matches";
 import "./css/Information.css";
 import "./css/tag.css";
 
 class Information extends Component {
+	handleSubmit = (e) => {
+		if(e === "") return
+		let url = document.location.origin
+		url += "/#/details/"
+		url += e
+		window.location.href = url
+	}
+	
 	render() {
 		return (
 			<div className="infoWrap">
@@ -16,6 +25,9 @@ class Information extends Component {
 									<img className="image" alt="" src="//opgg-static.akamaized.net/images/logo/logo-lol.png" />
 									<span>AKM.GG</span>
 								</a>
+							</li>
+							<li className="researchForm">
+								<Search submit={this.handleSubmit} />
 							</li>
 						</ul>
 					</div>

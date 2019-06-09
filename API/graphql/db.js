@@ -4,7 +4,7 @@ const LEAGUE_URL = "https://kr.api.riotgames.com/lol/league/v4/positions/by-summ
 const MATCHES_URL = "https://kr.api.riotgames.com/lol/match/v4/matchlists/by-account/";
 const MATCH_URL = "https://kr.api.riotgames.com/lol/match/v4/matches/";
 
-const api_key = "RGAPI-86a01a49-fd8a-4c32-a02c-9db62ee53c84";
+const api_key = "RGAPI-d7cdb2c3-8572-4329-9f6e-95b0b03bdbf5";
 
 function sleep (delay) {
    var start = new Date().getTime();
