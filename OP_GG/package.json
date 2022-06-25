@@ -7,7 +7,7 @@
     "express": "^4.16.4",
     "graphql": "^14.2.1",
     "graphql-tag": "^2.10.1",
-    "node-fetch": "^2.3.0",
+    "node-fetch": "^2.6.7",
     "react": "^16.5.2",
     "react-apollo": "^2.5.4",
     "react-dom": "^16.5.2",
